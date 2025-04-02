@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zyu Store - Site</title>
+</head>
+<body style="text-align: center; padding: 10px; background-color: #222; color: white; font-size: 14px; margin-top: 20px;">
+  <div class="container">
+    <h2 style="color: black; background-color: white;">WEBSITE ZYU OFFCIAL</h2>
+    <label style="color: white;" for="barangnye">PILIH BARANG</label>
+    <br>
+    <select id="barangnye">
+      <option value="">Pilih Barang Yang Anda Inginkan</option>
+      <option value="Jasa Fix Error Script Bot WhatsApp">Jasa Fix Error Script Bot WhatsApp</option>
+      <option value="Jasa Create Script Bot WhatsApp">Jasa Create Script Bot WhatsApp</option>
+      <option value="Jasa Rename Script Bot WhatsApp">Jasa Rename Script Bot WhatsApp</option>
+      <option value="Panel Petrodactly">Panel Petrodactly</option>
+      <option value="Jasa Suntik Follower/Like Akun Sosmed">Jasa Suntik Follower/Like Akun Sosmed</option>
+      </select>
+      <br><br>
+      <label style="color: white;"for="keterangannye">MASUKAN KETERANGAN</label>
+      <input type="text" id="keterangannye" placeholder="Masukan Keterangan">
+      <br><br>
+      <button onclick="sendToWea()">Pesan</button>
+      <script>
+        function sendToWea() {
+          let barang = document.getElementById("barangnye").value;
+          let keterangan = document.getElementById("keterangannye").value;
+          if (!barang || !keterangan) return alert("Masukan Barang Yang Anda Inginkan Dan Tambahkan Keterangan")
+          let pesannye = `*HAI ZYUREN, BERIKUT DETAIL PEMBAYARAN PRODUK*\n\`NAMA BARANG: ${barang}\`\n\`KETERANGAN: ${keterangan}\`\n\n*[ ! ] TOLONG HITUNG TOTAL BELANJA SAYA, DAN KIRIM PAYMENT ANDA.*`
+          window.open(`https://wa.me/6281915843156?text=${encodeURIComponent(pesannye)}`, '_blank')
+        }
+      </script>
+      <br><br><br><br><br>
+     <footer style="text-align: center; padding: 10px; color: white; font-size: 14px; margin-top: 20px;">
+    <p>Zyu Store - Aman, Terpercaya, dan Harga Terjangkau!</p>
+    <p>© Zyu Store 2025</p>
+</footer>
+    </div>
+</body>
+</html>
